@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.0">
+  <CommandSet xml:lang="en-us">
+    
+    <CommandPrefix> Contoso Cookbook </CommandPrefix>
+    <Example> Show recipes for (Country Name) </Example>
+
+    <Command Name="Start">
+      <Example> Show recipes </Example>
+      <ListenFor> Show recipes</ListenFor>
+      <Feedback> Showing recipe groups </Feedback>
+      <Navigate Target="MainPage.xaml" />
+    </Command>
+    
+    <Command Name="ShowRecipes">
+      <Example> Show Chinese recipes </Example>
+      <ListenFor> Show [me] {groupName} recipes</ListenFor>
+      <Feedback> Showing {groupName} recipes </Feedback>
+      <Navigate Target="GroupDetailPage.xaml" />
+    </Command>
+
+    <PhraseList Label="groupName">
+      <Item> Chinese </Item>
+      <Item> French </Item>
+      <Item> German </Item>
+      <Item> Indian </Item>
+      <Item> Italian </Item>
+      <Item> Mexican </Item>
+    </PhraseList>
+  </CommandSet>
+</VoiceCommands>
+
